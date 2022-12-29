@@ -1,0 +1,15 @@
+.container {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.select {
+  height        : 38px;
+  border        : .125rem solid #e1e2e4;
+  border-radius : .25rem 0 0 .25rem;
+  border-right  : none;
+  outline       : #969798;
+  font-size     : 11px;
+  text-transform: uppercase;
+}
