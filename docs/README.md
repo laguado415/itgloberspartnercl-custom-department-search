@@ -1,6 +1,6 @@
-# Add to cart info Component
+# Custom Department Search Component
 
-Componente AddToCartInfo, responsable de mostrar una lista con todos los productos añadidos al minicart, una vez se agregue un producto a este mismo.  
+Componente DepartmentSearch, responsable de realizar busquedas en un departamento determinado.  
 
 <div align="center">
 
@@ -16,44 +16,10 @@ Para la configuracion se usara los valores por defecto como nombres de component
 
 ```json
    "dependencies": {
-    "{vendor}.add-to-cart-info": "0.x"
+    "{vendor}.custom-department-search": "0.x"
   }
 ```
-######  2 - Agregue el modal-trigger component a la página que deseé que renderice este componente, addicionalmente como children al componente modal-layout declarar un componente "add-to-cart-info".
- ```json
-   "modal-trigger#add-to-cart-button": {
-    "children": ["modal-layout#add-to-cart-button"],
-    "props": {
-      "customPixelEventName": "addToCart"
-    }
-  },
-  "modal-layout#add-to-cart-button": {
-    "children": ["modal-header#add-to-cart-info", "add-to-cart-info"]
-  },
-  "modal-header#add-to-cart-info": {
-    "children": ["rich-text#add-to-cart-info"],
-    "props": {
-      "showCloseButton": true,
-      "iconCloseSize": 20,
-      "blockClass": "modal-header"
-    }
-  },
-  "rich-text#add-to-cart-info": {
-    "props": {
-      "text": "ADD TO CART INFO",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER"
-    }
-  }
-```
-
-######  3 - Configuré las props.
-
-## Props:
-
-| Prop name      | Type     | Description                                          | Default value |
-| -------------- | -------- | ---------------------------------------------------- | ------------- |
-| `blockClass`     | `String` | BlockClass custom    |  N/A |
+######  2 - Agregue el `department-search` component a la página que deseé que renderice este componente.
 
 ## Configuración repositorio 
 ### Paso 1 - Clonación del repositorio
@@ -128,16 +94,9 @@ Para personalizar el componente, utilizar los css handles.
 | CSS Handles      |
 | ---------------- |
 |  `container`     |  
-|  `item`          |  
-|  `image`         |   
-|  `name`          |  
-|  `quantity`      |  
-|  `price`         |  
-|  `totalizers`    |  
-|  `buttonGroup`   |  
-|  `checkout`      |  
-|  `minicart`      |  
-|  `continue`      |  
+|  `select`        |  
+|  `options`       |   
+
 
 ## Contributors
 1. Jonathan Laguado  
